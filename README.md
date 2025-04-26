@@ -8,12 +8,12 @@
 A lightweight Flask web application that uses BERT-based AI to detect fake news articles. I used pre-trained BERT to perform the classification task on publicly available dataset of fake news. BERT is a Natural Language Processing (NLP) model that has been made open-source.
 
 <p align="center">
-  <img src="static/img/app_interface.png" alt="App Interface" width="600" height="250"/>
+  <img src="static/img/app_interface.png" alt="App Interface" width="650"/>
 </p>
 <br/>
 <p align="center">
-  <img src="static/img/real_news.png" alt="Real News Example" width="400" height="300" style="margin-right: 20px;"/>
-  <img src="static/img/fake_news.png" alt="Fake News Example" width="400" height="300" style="margin-left: 20px;"/>
+  <img src="static/img/real_news.png" alt="Real News Example" width="500"/>&nbsp;
+  <img src="static/img/fake_news.png" alt="Fake News Example" width="500"/>
 </p>
 
 ## ✨ Key Features
@@ -36,9 +36,14 @@ The model was trained on [Fake News Dataset](https://www.kaggle.com/datasets/emi
 
 ## 📈 Model Results
 
-<img src="static/img/confusion_matrix.png" alt="Confusion Matrix" width="300" height="200"/>&ensp;
-<img src="static/img/accuracy_plot.png" alt="Accuracy Plot" width="300" height="200"/>&ensp;
-<img src="static/img/loss_plot.png" alt="Loss Plot" width="300" height="200"/>
+<p align="center">
+ <img src="static/img/confusion_matrix.png" alt="Confusion Matrix" width="500" />
+</p>
+<br/>
+<p align="center">
+  <img src="static/img/accuracy_plot.png" alt="Accuracy Plot" width="500"/>
+  <img src="static/img/loss_plot.png" alt="Loss Plot" width="500"/>
+</p>
 
 ## 🚀 Getting Started
 
