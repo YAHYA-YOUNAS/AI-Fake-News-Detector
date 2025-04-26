@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-newspaper"></i>
+                <h1>Fake News Detector</h1>
+            </div>
+            <p class="tagline">AI-powered detection of misinformation</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <form id="news-form">
+                    <div class="input-group">
+                        <label for="news-title">News Title</label>
+                        <input type="text" id="news-title" placeholder="Enter the news headline/title" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="news-content">News Content</label>
+                        <textarea id="news-content" placeholder="Paste the full article text here" required></textarea>
+                    </div>
+
+                    <button type="submit" class="analyze-btn">
+                        <span class="btn-text">Analyze News</span>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="results-section hidden" id="results-section">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <button id="close-results" class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="result-card">
+                    <div class="verdict-container">
+                        <div class="verdict-label">VERDICT</div>
+                        <div class="verdict" id="verdict-value">Processing...</div>
+                    </div>
+
+                    <div class="confidence-bar-container">
+                        <div class="confidence-label">Confidence</div>
+                        <div class="confidence-bar">
+                            <div class="confidence-progress" id="confidence-progress"></div>
+                        </div>
+                        <div class="confidence-value" id="confidence-value">0%</div>
+                    </div>
+
+                    <div class="probability-container">
+                        <div class="probability-item">
+                            <div class="probability-label">Real</div>
+                            <div class="probability-bar">
+                                <div class="probability-progress real" id="real-progress"></div>
+                            </div>
+                            <div class="probability-value" id="real-value">0%</div>
+                        </div>
+
+                        <div class="probability-item">
+                            <div class="probability-label">Fake</div>
+                            <div class="probability-bar">
+                                <div class="probability-progress fake" id="fake-progress"></div>
+                            </div>
+                            <div class="probability-value" id="fake-value">0%</div>
+                        </div>
+                    </div>
+
+                    <div class="interpretation" id="interpretation">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Analysis interpretation will appear here.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading-overlay" id="loading-overlay">
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                <div class="loading-text">Analyzing news...</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by BERT AI and Machine Learning</p>
+            <p class="small">© 2025 Fake News Detector Project by <a
+                    href="https://yahya-younas.github.io/yahya-younas-portfolio" target="_blank">Yahya</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+:root {
+    --primary-color: #5ebeae;
+    --secondary-color: #4f9186;
+    --accent-color: #4caf50;
+    --danger-color: #ff5252;
+    --background-color: #f5f7fa;
+    --card-bg-color: #ffffff;
+    --text-color: #333333;
+    --text-light: #666666;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    position: relative;
+}
+
+.input-section {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+    animation: slideUp 0.8s ease;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e1e5ee;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: var(--transition);
+}
+
+textarea {
+    min-height: 150px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+}
+
+.analyze-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.analyze-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.analyze-btn i {
+    margin-left: 0.5rem;
+}
+
+/* Results section */
+.results-section {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    animation: slideUp 0.8s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.results-header h2 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--danger-color);
+}
+
+.result-card {
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-left: 5px solid var(--primary-color);
+}
+
+.verdict-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.verdict-label {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.verdict {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.verdict.real {
+    color: var(--accent-color);
+}
+
+.verdict.fake {
+    color: var(--danger-color);
+}
+
+.confidence-bar-container,
+.probability-container {
+    margin-bottom: 1.5rem;
+}
+
+.confidence-label,
+.probability-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.confidence-bar,
+.probability-bar {
+    height: 15px;
+    background-color: #e1e5ee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+}
+
+.confidence-progress,
+.probability-progress {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.confidence-progress {
+    background-color: var(--primary-color);
+}
+
+.probability-progress.real {
+    background-color: var(--accent-color);
+}
+
+.probability-progress.fake {
+    background-color: var(--danger-color);
+}
+
+.confidence-value,
+.probability-value {
+    text-align: right;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.probability-item {
+    margin-bottom: 1rem;
+}
+
+.interpretation {
+    background-color: rgba(74, 111, 165, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-start;
+}
+
+.interpretation i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-top: 0.2rem;
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.loading-spinner {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.loading-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.small {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .input-section,
+    .results-section {
+        padding: 1.5rem;
+    }
+
+    .verdict {
+        font-size: 1.2rem;
+    }
+}
