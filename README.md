@@ -41,8 +41,8 @@ The model was trained on [Fake News Dataset](https://www.kaggle.com/datasets/emi
 </p>
 <br/>
 <p align="center">
-  <img src="static/img/accuracy_plot.png" alt="Accuracy Plot" width="500"/>
-  <img src="static/img/loss_plot.png" alt="Loss Plot" width="500"/>
+  <img src="static/img/accuracy_plot.png" alt="Accuracy Plot" width="450"/>
+  <img src="static/img/loss_plot.png" alt="Loss Plot" width="450"/>
 </p>
 
 ## 🚀 Getting Started
