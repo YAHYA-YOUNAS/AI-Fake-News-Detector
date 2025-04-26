@@ -12,8 +12,8 @@ A lightweight Flask web application that uses BERT-based AI to detect fake news 
 </p>
 <br/>
 <p align="center">
-  <img src="static/img/real_news.png" alt="Real News Example" width="500"/>&nbsp;
-  <img src="static/img/fake_news.png" alt="Fake News Example" width="500"/>
+  <img src="static/img/real_news.png" alt="Real News Example" width="450"/>&nbsp;
+  <img src="static/img/fake_news.png" alt="Fake News Example" width="450"/>
 </p>
 
 ## ✨ Key Features
