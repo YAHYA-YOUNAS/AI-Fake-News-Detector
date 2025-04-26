@@ -12,8 +12,8 @@ A lightweight Flask web application that uses BERT-based AI to detect fake news 
 </p>
 <br/>
 <p align="center">
-  <img src="static/img/real_news.png" alt="Real News Example" width="450"/>&nbsp;
-  <img src="static/img/fake_news.png" alt="Fake News Example" width="450"/>
+  <img src="static/img/real_news.png" alt="Real News Example" width="400"/>&nbsp;
+  <img src="static/img/fake_news.png" alt="Fake News Example" width="400"/>
 </p>
 
 ## ✨ Key Features
@@ -41,8 +41,8 @@ The model was trained on [Fake News Dataset](https://www.kaggle.com/datasets/emi
 </p>
 <br/>
 <p align="center">
-  <img src="static/img/accuracy_plot.png" alt="Accuracy Plot" width="450"/>
-  <img src="static/img/loss_plot.png" alt="Loss Plot" width="450"/>
+  <img src="static/img/accuracy_plot.png" alt="Accuracy Plot" width="400"/>
+  <img src="static/img/loss_plot.png" alt="Loss Plot" width="400"/>
 </p>
 
 ## 🚀 Getting Started
