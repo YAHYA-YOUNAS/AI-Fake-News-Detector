@@ -54,7 +54,7 @@ The model was trained on [Fake News Dataset](https://www.kaggle.com/datasets/emi
 
 ```bash
 git clone https://github.com/YAHYA-YOUNAS/AI-Fake-News-Detector.git
-cd fake-news-detector
+cd AI-Fake-News-Detector
 ```
 
 2. Create a virtual environment:
@@ -112,4 +112,4 @@ Contributions are welcome! Please follow these steps:
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
